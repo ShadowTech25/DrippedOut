@@ -1,155 +1,31 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Store</title>
-    <style>
-        /* Reset some default styles */
-        body, h1, h2, p {
-            margin: 0;
-            padding: 0;
-        }
-
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-
-        .banner {
-            text-align: center;
-            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-            color: white;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .banner h1 {
-            font-size: 3rem;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 1rem;
-        }
-
-
-        .products {
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-
-        .product {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            text-align: center;
-        }
-
-
-        .product img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-
-        .product h2 {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-        }
-
-
-        .product p {
-            color: #555;
-        }
-
-
-        .product button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            margin-bottom: 1rem;
-        }
-
-
-        .product button:hover {
-            background-color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dripped Out Apparel</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav>
-        <div class="logo">Clothing Store</div>
-        <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="cart.html">Cart</a>
-            <a href="contact.html">Contact</a>
-        </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Dripped Out</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
     </nav>
-    <section class="banner">
-        <h1>Welcome to Our Clothing Store</h1>
-    </section>
-    <section class="products">
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Product 1">
-            <h2>Product 1</h2>
-            <p>$29.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Product 2">
-            <h2>Product 2</h2>
-            <p>$39.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Product 3">
-            <h2>Product 3</h2>
-            <p>$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-    </section>
-<nav>
-    <div class="logo">Clothing Store</div>
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="cart.html">Cart</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
-    <script src="script.js"></script>
+  </header>
+
+  <section class="hero">
+    <h1>Dripped Out Apparel</h1>
+    <p>Streetwear meets luxury. Stay bold. Stay iconic.</p>
+    <a href="products.html"><button class="cta">Shop Now</button></a>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
