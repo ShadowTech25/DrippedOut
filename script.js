@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.buy-button').forEach(button => {
     button.addEventListener('click', () => {
       const productCard = button.closest('.product-card');
-      const productId = productCard.getAttribute('data-id') || productCard.querySelector('h3').innerText;
+      const productId = productCard.querySelector('h3').innerText;
       const productName = productCard.querySelector('h3').innerText;
       const productPrice = productCard.querySelector('.price').innerText;
       const productImage = productCard.querySelector('img').src;
@@ -17,4 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
       alert(`${productName} has been added to your cart.`);
     });
   });
-});
+
+  const categorySelect = document.getElementById('categorySelect');
+  const allSections = document.querySelectorAll('.category-section');
+
+  categorySelect.addEventListener('change', () => {
+    const selected = categorySelect.value;
+    allSections.forEach(section => {
+      section.style.display = section.classList.contains(selected) || selected === 'all' ? 'flex' : 'none';
+    });
+  });
+}
