@@ -1,47 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Cart - Dripped Out</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Dripped Out</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="cart.html" class="active">Cart</a></li>
-        <li><a href="checkout.html">Checkout</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main style="padding: 40px;">
-    <h1>Your Cart</h1>
-    <div id="cart-items"></div>
-    <p id="cart-total" style="margin-top: 20px;"></p>
-    <a href="checkout.html" class="buy-button" style="display: inline-block; margin-top: 20px;">Proceed to Checkout</a>
-  </main>
-  <script>
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartContainer = document.getElementById('cart-items');
-    const cartTotal = document.getElementById('cart-total');
-
-    if (cart.length === 0) {
-      cartContainer.innerHTML = '<p>Your cart is empty.</p>';
-    } else {
-      let total = 0;
-      cart.forEach(product => {
-        const div = document.createElement('div');
-        div.innerHTML = `<strong>${product.name}</strong> - ${product.price}<br>`;
-        cartContainer.appendChild(div);
-        total += parseFloat(product.price.replace('$',''));
-      });
-      cartTotal.textContent = `Total: $${total.toFixed(2)}`;
-    }
-  </script>
+<!DOCTYPE html><html><head><link rel='stylesheet' href='style.css'></head><body><header class='navbar'><div class='logo'>Dripped Out</div></header><main><h1>Cart</h1></main>
+  <footer class="site-footer">
+    <p>© 2025 Dripped Out Apparel. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>|
+      <a href="products.html">Shop</a>|
+      <a href="about.html">About</a>|
+      <a href="cart.html">Cart</a>|
+      <a href="checkout.html">Checkout</a>
+    </div>
+  </footer>
 </body>
 </html>
